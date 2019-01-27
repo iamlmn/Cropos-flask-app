@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CropOS utilities</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href={{url_for('static',filename='css/custom/style.css')}}>
+    <!-- <link rel="stylesheet" type="text/css" href={{url_for('static',filename='css/custom/custom.css')}} media="screen"> -->
+    <link rel="shortcut icon" href={{url_for('static',filename='favicon.ico')}}>
+  </head>
+  <header>
+  </header>
+
+  <body>
+<div>
+
+
+    <section class="page-header">
+
+      <h1 class="project-name">Crop OS utility</h1><br>
+
+      <span class="glyphicon glyphicon-search" aria-hidden="true"></span><br>
+      <h2 class="project-tagline"> This is an app to convert agricultural datasets to the CropOS format.</h2><br>
+      <a href="https://github.com/lmn171194/CropOS_ETL" class="btn"><span class=" glyphicon glyphicon-save"></span>View on GitHub</a>
+      <a href="https://github.com/lmn171194/CropOS_ETL/zipball/master" class="btn"><span class=" glyphicon glyphicon-save"></span>Download .zip</a>
+      <a href="https://github.com/pekebyte/pekeUpload/tarball/master" class="btn">Download .tar.gz</a>
+
+    </section>
+<div class="container lol">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#combine" aria-controls="combine" role="tab" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;Combine/Edit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li role="presentation"><a href="#convert" aria-controls="convert" role="tab" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;Convert&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li role="presentation"><a href="#validate" aria-controls="validate" role="tab" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;Validate&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;Settings&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="combine">Utils required for combining into a single file </div>
+  <div role="tabpanel" class="tab-pane" id="convert">Convert the labeled file with config into Crop OS template</div>
+  <div role="tabpanel" class="tab-pane" id="validate">Validate before uploading</div>
+  <div role="tabpanel" class="tab-pane" id="settings">...</div>
+  </div>
+
+</div>
+
+</div>
+    </body>
+</html>

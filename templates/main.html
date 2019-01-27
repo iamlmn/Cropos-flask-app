@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CropOS utilities</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- <link rel="stylesheet" href={{url_for('static',filename='css/bootstrap.min.css')}}> -->
+    <link rel="stylesheet" type="text/css" href={{url_for('static',filename='css/custom/style.css')}} media="screen">
+    <link rel="stylesheet" type="text/css" href={{url_for('static',filename='css/custom/custom.css')}} media="screen">
+    <link rel="shortcut icon" href={{url_for('static',filename='favicon.ico')}}>
+    <!-- <script type="text/javascript" src={{url_for('static',filename='js/custom/jquery-2.1.4.min.js')}}></script> -->
+    <!-- <script type="text/javascript" src={{url_for('static',filename='js/custom/pekeUpload.min.js')}}></script> -->
+
+   <!-- <script type="text/javascript" src="static/js/custom/pekeUpload.js"></script> -->
+
+  </head>
+<body>
+
+  <!-- <div class="container" style="min-height:100% width:80%"> -->
+  	{% with messages = get_flashed_messages() %}
+  	  {% if messages %}
+  	    {% for message in messages %}
+  		  <div class="alert alert-danger alert-dismissible" role="alert">
+  		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+  			{{message}}
+  		  </div>
+  		{% endfor %}
+  	  {% endif %}
+  	{% endwith %}
+
+
+<section class="page-header" style="background:green;background-image: linear-gradient(90deg, green, lightblue);">
+      <h1 class="project-name">Crop OS utility</h1>
+      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+      <h2 class="project-tagline"> This is an app to convert agricultural datasets to the CropOS format.</h2>
+      <a href="https://github.com/lmn171194/CropOS_ETL" class="btn"><span class=" glyphicon glyphicon-save"></span>View on GitHub</a>
+      <a href="https://github.com/lmn171194/CropOS_ETL/zipball/master" class="btn"><span class=" glyphicon glyphicon-save"></span>Download .zip</a>
+      <a href="https://github.com/pekebyte/pekeUpload/tarball/master" class="btn">Download .tar.gz</a>
+    <div class="container">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#combine" aria-controls="combine" role="tab" data-toggle="tab">Combine/Edit</a></li>
+    <li role="presentation"><a href="#convert" aria-controls="convert" role="tab" data-toggle="tab">Convert</a></li>
+    <li role="presentation"><a href="#validate" aria-controls="validate" role="tab" data-toggle="tab">Validate</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="combine">Utils required for combining into a single file
+      <!-- <style>
+            #myProgress {
+        width: 100%;
+        background-color: #ddd;
+      }
+
+      #myBar {
+        width: 10%;
+        height: 30px;
+        background-color: #4CAF50;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+      }
+      </style>
+      <body>
+
+      <h1>JavaScript Progress Bar</h1>
+
+      <div id="myProgress">
+        <div id="myBar">10%</div>
+      </div>
+
+      <br>
+      <button onclick="move()">Click Me</button>
+
+      <script>
+      function move() {
+        var elem = document.getElementById("myBar");
+        var width = 10;
+        var id = setInterval(frame, 10);
+        function frame() {
+          if (width >= 100) {
+            clearInterval(id);
+          } else {
+            width++;
+            elem.style.width = width + '%';
+            elem.innerHTML = width * 1  + '%';
+          }
+        }
+      }
+      </script> -->
+
+    </div>
+<!-- Conversion content -->
+      <div role="tabpanel" class="tab-pane" id="convert">Convert the labeled file with config into Crop OS template
+
+          <!-- <style>
+        .loader {
+          border: 16px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 16px solid #3498db;
+          width: 120px;
+          height: 120px;
+          -webkit-animation: spin 2s linear infinite; /* Safari */
+          animation: spin 2s linear infinite;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        </style>
+        </head>
+        <body>
+
+        <h2>How To Create A Loader</h2>
+
+        <div class="loader"></div> -->
+
+
+      </div>
+    <div role="tabpanel" class="tab-pane" id="validate">Validate before uploading</div>
+    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+  </div>
+
+</div>
+</section>
+
+
+<!-- Modal for starting the script -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+<footer>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+
+</footer>
+    </body>
+</html>
